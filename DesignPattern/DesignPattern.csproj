@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E4E7F0EE-C5C9-4096-9F6E-F3827C6BB681}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DesignPattern</RootNamespace>
+    <AssemblyName>DesignPattern</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CreationalPatterns\AbstractFactory\MazeFactory.cs" />
+    <Compile Include="CreationalPatterns\AbstractFactory\MazeGame.cs" />
+    <Compile Include="CreationalPatterns\AbstractFactory\SpecialMazeFactory.cs" />
+    <Compile Include="CreationalPatterns\AbstractFactory\StandardMazeFactory.cs" />
+    <Compile Include="CreationalPatterns\Builder\MazeBuilder.cs" />
+    <Compile Include="CreationalPatterns\Builder\MazeGame.cs" />
+    <Compile Include="CreationalPatterns\Builder\StandMazeBuilder.cs" />
+    <Compile Include="CreationalPatterns\FactoryMethod\SpecialMazeGame.cs" />
+    <Compile Include="CreationalPatterns\FactoryMethod\StandardMazeGame.cs" />
+    <Compile Include="CreationalPatterns\MapSites\Abstract\Maze.cs" />
+    <Compile Include="CreationalPatterns\MapSites\Direction.cs" />
+    <Compile Include="CreationalPatterns\MapSites\Abstract\Door.cs" />
+    <Compile Include="CreationalPatterns\FactoryMethod\MazeGame.cs" />
+    <Compile Include="CreationalPatterns\MapSites\Abstract\MapSite.cs" />
+    <Compile Include="CreationalPatterns\MapSites\Special\SpecialDoor.cs" />
+    <Compile Include="CreationalPatterns\MapSites\Special\SpecialRoom.cs" />
+    <Compile Include="CreationalPatterns\MapSites\Special\SpecialWall.cs" />
+    <Compile Include="CreationalPatterns\MapSites\Special\SpecialMaze.cs" />
+    <Compile Include="CreationalPatterns\MapSites\Standard\StandardMaze.cs" />
+    <Compile Include="CreationalPatterns\MapSites\Standard\StandardDoor.cs" />
+    <Compile Include="CreationalPatterns\MapSites\Standard\StandardRoom.cs" />
+    <Compile Include="CreationalPatterns\MapSites\Standard\StandardWall.cs" />
+    <Compile Include="CreationalPatterns\MazeGame.cs" />
+    <Compile Include="CreationalPatterns\Prototype\MazePrototypeFactory.cs" />
+    <Compile Include="CreationalPatterns\MapSites\Abstract\Room.cs" />
+    <Compile Include="CreationalPatterns\MapSites\Abstract\Wall.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="CreationalPatterns\Singleton\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CreationalPatterns\AbstractFactory\README.md" />
+    <None Include="CreationalPatterns\FactoryMethod\README.md" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
