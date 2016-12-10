@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using DesignPattern.CreationalPatterns.MapSites;
-using DesignPattern.CreationalPatterns.MapSites.Abstract;
+﻿using DesignPattern.CreationalPatterns.MapSites.Abstract;
 using DesignPattern.CreationalPatterns.MapSites.Standard;
 
 namespace DesignPattern.CreationalPatterns.Builder
 {
-    public class StandMazeBuilder : MazeBuilder
+    public class StandardMazeBuilder : MazeBuilder
     {
         private Maze _maze;
 

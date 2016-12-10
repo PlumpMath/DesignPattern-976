@@ -39,6 +39,7 @@ namespace DesignPattern.CreationalPatterns.AbstractFactory
             using (DbConnection connection = factory.CreateConnection())
             {
                 connection.ConnectionString = "connectionString";
+                connection.Open();
 
                 DbCommand command = factory.CreateCommand();
                 command.Connection = connection;
